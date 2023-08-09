@@ -13,14 +13,14 @@ const App = () => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "100px" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "5.5rem" }}>
         {/* =============== heading */}
-        <Typography variant="h5" gutterBottom sx={{ color: "#4c4c4c", fontWeight: "800", marginBottom: "32px" }}>
+        <Typography sx={{ color: "#4c4c4c", fontWeight: "800" }} style={{ fontSize: "28px" }}>
           Registration
         </Typography>
 
         {/* =============== registration form start */}
-        <form onSubmit={handleSubmit(onSubmit)} className="form_layout">
+        <form onSubmit={handleSubmit(onSubmit)} className="form_layout" style={{ marginTop: "40px" }}>
           {errors.listName?.type === "required" && (
             <Typography className="error" role="alert">
               Lis&apos;s link name is required
@@ -28,7 +28,7 @@ const App = () => {
           )}
 
           <InputBase
-            sx={{ marginBottom: "30px", outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
+            sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "100px", width: "100%" }}
             {...register("listName", { required: true })}
             variant="outlined"
             fullWidth
@@ -43,7 +43,7 @@ const App = () => {
           )}
 
           <InputBase
-            sx={{ marginBottom: "30px", outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
+            sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("name", { required: true })}
             placeholder="Name"
             variant="outlined"
@@ -58,7 +58,7 @@ const App = () => {
           )}
 
           <InputBase
-            sx={{ marginBottom: "30px", outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
+            sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("surname", { required: true })}
             placeholder="Surname"
             variant="outlined"
@@ -81,7 +81,7 @@ const App = () => {
             error={errors.email}
           />
 
-          <Box sx={{ textAlign: "center", marginTop: "40px" }}>
+          <Box sx={{ textAlign: "center", marginTop: "20px" }}>
             {/* checkbox */}
             <div style={{ marginBottom: "60px" }} className="input_checkbox">
               <input type="checkbox" id="cb1" />
@@ -95,7 +95,7 @@ const App = () => {
               variant="contained"
               sx={{
                 display: "inline-block",
-                padding: "15px 28px",
+                padding: "16px 36px",
                 background: "rgb(238, 80, 127)",
                 color: "white",
                 fontSize: "18px",

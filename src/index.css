@@ -17,19 +17,14 @@ body {
 
 /* ======================== custom layout define */
 
-.main_layout {
-  width: 100%;
-  background: #fff;
-}
-
-.container {
-  width: 97%;
-  margin: 0 auto;
-}
-
 /* ======================== Form Layout define */
 .form_layout {
+  display: flex;
   width: 660px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 
 /* ======================== Custom checkbox design */
@@ -54,10 +49,25 @@ input[id="cb1"] {
 
 .input_checkbox {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   column-gap: 8px;
   width: 100%;
+}
+
+.select_btn_menu {
+  border-radius: 30px;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #4c4c4c;
+}
+.select_btn {
+  width: 66px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: #4c4c4c;
+  border: 1px solid #4c4c4c;
 }
 
 /* ========================= error message style */
@@ -77,7 +87,7 @@ input[id="cb1"] {
 }
 .shape2 {
   position: absolute;
-  top: -148%;
+  top: -165%;
   left: -5px;
 }
 
@@ -122,7 +132,7 @@ input[id="cb1"] {
   .shape2 {
     display: block;
     position: absolute;
-    top: -145%;
+    top: -165%;
   }
 }
 @media (min-width: 1024px) {
@@ -133,7 +143,7 @@ input[id="cb1"] {
   }
   .shape2 {
     position: absolute;
-    top: -148%;
+    top: -165%;
   }
 }
 @media (min-width: 1280px) {
@@ -144,6 +154,6 @@ input[id="cb1"] {
   }
   .shape2 {
     position: absolute;
-    top: -148%;
+    top: -165%;
   }
 }
