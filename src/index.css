@@ -20,10 +20,8 @@ body {
 /* ======================== Form Layout define */
 .form_layout {
   display: flex;
-  width: 660px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 660px;
   gap: 24px;
 }
 
@@ -57,7 +55,7 @@ input[id="cb1"] {
 
 .select_btn_menu {
   border-radius: 30px;
-  padding: 6px 12px;
+  padding: 9px 13px;
   cursor: pointer;
   color: #4c4c4c;
 }
@@ -87,15 +85,19 @@ input[id="cb1"] {
 }
 .shape2 {
   position: absolute;
-  top: -165%;
+  top: -99%;
   left: -5px;
+}
+
+.store_img {
+  width: 190px;
 }
 
 /* ========================= responsive handler start  ================================*/
 
-@media (min-width: 320px) and (max-width: 668px) {
+@media (min-width: 320px) and (max-width: 425px) {
   .form_layout {
-    width: 320px;
+    width: 290px;
   }
 
   input[id="cb1"] + label {
@@ -110,6 +112,15 @@ input[id="cb1"] {
   .input_checkbox {
     width: 62%;
     margin: 0 auto;
+  }
+
+  .store_img {
+    width: 167px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .form_layout {
+    width: 300px;
   }
 }
 
@@ -132,7 +143,7 @@ input[id="cb1"] {
   .shape2 {
     display: block;
     position: absolute;
-    top: -165%;
+    top: -99%;
   }
 }
 @media (min-width: 1024px) {
@@ -141,9 +152,12 @@ input[id="cb1"] {
     top: 10%;
     right: -5%;
   }
-  .shape2 {
+  /* .shape2 {
     position: absolute;
-    top: -165%;
+    top: -99%;
+  } */
+  .store_img {
+    width: 190px;
   }
 }
 @media (min-width: 1280px) {
@@ -152,8 +166,8 @@ input[id="cb1"] {
     top: 20%;
     right: 0;
   }
-  .shape2 {
+  /* .shape2 {
     position: absolute;
-    top: -165%;
-  }
+    top: -99%;
+  } */
 }

@@ -23,7 +23,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#fff", boxShadow: "none", borderBottom: "1px solid #E8E8E8", padding: "26px 0" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#fff", boxShadow: "none", borderBottom: "1px solid #E8E8E8", height: "100px", display:"flex", alignItems:"center" , justifyContent:"center" }}>
       <Container>
         {/* ======================= desktop logo */}
         <Toolbar disableGutters>
@@ -133,7 +133,7 @@ function Header() {
               <Box sx={{ display: "inline-block" }}>
                 <select className="select_btn" name="language" id="language">
                   <option value="NL">NL</option>
-                  <option value="English">English</option>
+                  <option value="EN">EN</option>
                 </select>
               </Box>
               {/* login */}
