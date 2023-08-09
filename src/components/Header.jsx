@@ -36,7 +36,7 @@ function Header() {
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#fff", boxShadow: "none", borderBottom: "1px solid #eee", padding: "18px 0" }}>
-      <Container maxWidth="xl">
+      <Container>
         <Toolbar disableGutters>
           <Box
             variant="h6"
@@ -100,7 +100,33 @@ function Header() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography
+                    sx={{
+                      color: "#00c0b3",
+                      background: "#fff",
+                      padding: "6px 22px",
+                      border: "2px solid #00c0b3",
+                      borderRadius: "30px",
+                      fontWeight: "bold",
+                      cursor: "pointer",
+                      textDecoration: "none",
+                    }}
+                    href="#"
+                    component="a"
+                    textAlign="center"
+                  >
+                    {page}
+                  </Typography>
+                  <FormControl sx={{ mx: 1, minWidth: 80 }} size="small">
+                    <InputLabel id="demo-select-small-label">Lang</InputLabel>
+                    <Select labelId="demo-select-small-label" id="demo-select-small" value={language} label="Lang" onChange={handleChange}>
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value="NL">NL</MenuItem>
+                      <MenuItem value="English">English</MenuItem>
+                    </Select>
+                  </FormControl>
                 </MenuItem>
               ))}
             </Menu>
