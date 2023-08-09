@@ -62,7 +62,6 @@ function Header() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-
               color: "inherit",
             }}
           >
