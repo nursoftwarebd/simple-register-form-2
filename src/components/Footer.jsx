@@ -99,12 +99,12 @@ const Footer = () => {
           </Stack>
 
           {/* play & app store */}
-          <Stack spacing={2} direction={"row"}>
+          <Stack spacing={1} direction={"row"}>
             <Link href="#">
-              <img width={190} alt="apple-store" src={appleStore} />
+              <img width={175} alt="apple-store" src={appleStore} />
             </Link>
             <Link href="#">
-              <img width={190} alt="play-store" src={playStore} />
+              <img width={175} alt="play-store" src={playStore} />
             </Link>
           </Stack>
         </Stack>
