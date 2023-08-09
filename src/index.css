@@ -26,8 +26,8 @@ body {
 /* ======================== Custom checkbox design */
 input[id="cb1"] + label {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #00c0b3;
   border-radius: 4px;
   cursor: pointer;
@@ -35,7 +35,7 @@ input[id="cb1"] + label {
 input[id="cb1"]:checked + label:after {
   position: relative;
   top: -4px;
-  left: 2px;
+  left: 0;
   content: "\2714";
   font-size: 14px;
 }
@@ -100,8 +100,8 @@ input[id="cb1"] {
 
   input[id="cb1"] + label {
     display: inline-block;
-    width: 22px;
-    height: 14px;
+    width: 28px;
+    height: 20px;
     border: 2px solid #00c0b3;
     border-radius: 4px;
     cursor: pointer;
@@ -129,8 +129,8 @@ input[id="cb1"] {
   }
   input[id="cb1"] + label {
     display: inline-block;
-    width: 22px;
-    height: 14px;
+    width: 26px;
+    height: 20px;
     border: 2px solid #00c0b3;
     border-radius: 4px;
     cursor: pointer;
