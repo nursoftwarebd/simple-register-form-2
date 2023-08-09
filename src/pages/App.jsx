@@ -14,15 +14,19 @@ const App = () => {
   return (
     <Container component="main" maxWidth="xs">
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "100px" }}>
+        {/* =============== heading */}
         <Typography variant="h5" gutterBottom sx={{ color: "#4c4c4c", fontWeight: "800", marginBottom: "32px" }}>
           Registration
         </Typography>
+
+        {/* =============== registration form start */}
         <form onSubmit={handleSubmit(onSubmit)} className="form_layout">
           {errors.listName?.type === "required" && (
             <Typography className="error" role="alert">
               Lis&apos;s link name is required
             </Typography>
           )}
+
           <InputBase
             sx={{ marginBottom: "30px", outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("listName", { required: true })}
@@ -37,6 +41,7 @@ const App = () => {
               Name is required
             </Typography>
           )}
+
           <InputBase
             sx={{ marginBottom: "30px", outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("name", { required: true })}
@@ -51,6 +56,7 @@ const App = () => {
               Surname is required
             </Typography>
           )}
+
           <InputBase
             sx={{ marginBottom: "30px", outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("surname", { required: true })}
@@ -65,6 +71,7 @@ const App = () => {
               Email is required
             </Typography>
           )}
+
           <InputBase
             sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
@@ -73,13 +80,16 @@ const App = () => {
             fullWidth
             error={errors.email}
           />
+
           <Box sx={{ textAlign: "center", marginTop: "40px" }}>
+            {/* checkbox */}
             <div style={{ marginBottom: "60px" }} className="input_checkbox">
               <input type="checkbox" id="cb1" />
               <label htmlFor="cb1"></label>
 
               <p>Keep me informed about my lists by email</p>
             </div>
+            {/* submit button */}
             <ButtonBase
               type="submit"
               variant="contained"
