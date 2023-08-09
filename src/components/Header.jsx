@@ -37,6 +37,7 @@ function Header() {
   return (
     <AppBar position="static" sx={{ backgroundColor: "#fff", boxShadow: "none", borderBottom: "1px solid #eee", padding: "18px 0" }}>
       <Container>
+        {/* ======================= desktop logo */}
         <Toolbar disableGutters>
           <Box
             variant="h6"
@@ -52,7 +53,7 @@ function Header() {
           >
             <img src={logo} alt="logo" loading="lazy" />
           </Box>
-
+          {/* =========================== mobile / tab size device logo */}
           <Box
             variant="h5"
             noWrap
@@ -68,7 +69,10 @@ function Header() {
           >
             <img src={logo} alt="logo" loading="lazy" />
           </Box>
+          {/* for structure.. this is empty box */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
+
+          {/* menu icon here */}
           <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -80,6 +84,8 @@ function Header() {
             >
               <MenuIcon />
             </IconButton>
+
+            {/* =============== dropdown menu here for mobile & tab device */}
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -117,6 +123,7 @@ function Header() {
                   >
                     {page}
                   </Typography>
+
                   <FormControl sx={{ mx: 1, minWidth: 80 }} size="small">
                     <InputLabel id="demo-select-small-label">Lang</InputLabel>
                     <Select labelId="demo-select-small-label" id="demo-select-small" value={language} label="Lang" onChange={handleChange}>
@@ -131,8 +138,11 @@ function Header() {
               ))}
             </Menu>
           </Box>
+
+          {/* ================================ desktop login & language buttons here */}
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <Tooltip title="Open settings">
+              {/* language */}
               <FormControl sx={{ mx: 1, minWidth: 80 }} size="small">
                 <InputLabel id="demo-select-small-label">Lang</InputLabel>
                 <Select labelId="demo-select-small-label" id="demo-select-small" value={language} label="Lang" onChange={handleChange}>
@@ -143,6 +153,8 @@ function Header() {
                   <MenuItem value="English">English</MenuItem>
                 </Select>
               </FormControl>
+
+              {/* login */}
               <ButtonBase
                 type="submit"
                 variant="contained"

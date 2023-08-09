@@ -3,15 +3,22 @@ import { AlternateEmail, Facebook, Instagram, LinkedIn, YouTube } from "@mui/ico
 import { Box, Container, Link, Stack, Typography } from "@mui/material";
 import appleStore from "../assets/app.png";
 import playStore from "../assets/play.png";
+import shape2 from "../assets/shape2.png";
 
 const Footer = () => {
   return (
-    <Box sx={{ width: "100%", borderTop: "1px solid #eee", paddingTop: "18px" }}>
+    <Box sx={{ width: "100%", borderTop: "1px solid #eee", paddingTop: "18px", position: "relative" }}>
+      {/* shape */}
+      <Box className="shape2">
+        <img src={shape2} alt="" />
+      </Box>
+
       <Container>
         <Stack
           spacing={2}
           sx={{ display: "flex", justifyContent: "space-between", flexDirection: { xs: "column", md: "row" }, alignItems: { xs: "center" } }}
         >
+          {/* social icons */}
           <Stack spacing={2} direction="row">
             <Link
               size="sm"
@@ -91,6 +98,7 @@ const Footer = () => {
             </Link>
           </Stack>
 
+          {/* play & app store */}
           <Stack spacing={2} direction={"row"}>
             <Link href="#">
               <img width={190} alt="apple-store" src={appleStore} />
@@ -100,6 +108,7 @@ const Footer = () => {
             </Link>
           </Stack>
         </Stack>
+        {/* copyright article */}
         <Typography
           variant="p"
           sx={{

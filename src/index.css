@@ -1,16 +1,21 @@
+/* ======================== google font : Nunito */
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
 
+/* ======================== default body structure */
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   position: relative;
 }
+
+/* ======================== custom layout define */
 
 .main_layout {
   width: 100%;
@@ -22,10 +27,12 @@ body {
   margin: 0 auto;
 }
 
+/* ======================== Form Layout define */
 .form_layout {
   width: 660px;
 }
 
+/* ======================== Custom checkbox design */
 input[id="cb1"] + label {
   display: inline-block;
   width: 14px;
@@ -53,12 +60,28 @@ input[id="cb1"] {
   width: 100%;
 }
 
+/* ========================= error message style */
+
 .error {
   color: red;
 }
 .error::after {
   content: "*";
 }
+
+/* ========================= background shape design */
+.shape1 {
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+.shape2 {
+  position: absolute;
+  top: -148%;
+  left: -5px;
+}
+
+/* ========================= responsive handler start  ================================*/
 
 @media (min-width: 320px) and (max-width: 668px) {
   .form_layout {
@@ -77,5 +100,50 @@ input[id="cb1"] {
   .input_checkbox {
     width: 62%;
     margin: 0 auto;
+  }
+}
+
+/* ========================= background shape responsive handling for all devices */
+@media (min-width: 300px) {
+  .shape1 {
+    display: none;
+  }
+  .shape2 {
+    display: none;
+  }
+}
+@media (min-width: 924px) {
+  .shape1 {
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: -8%;
+  }
+  .shape2 {
+    display: block;
+    position: absolute;
+    top: -145%;
+  }
+}
+@media (min-width: 1024px) {
+  .shape1 {
+    position: absolute;
+    top: 10%;
+    right: -5%;
+  }
+  .shape2 {
+    position: absolute;
+    top: -148%;
+  }
+}
+@media (min-width: 1280px) {
+  .shape1 {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+  .shape2 {
+    position: absolute;
+    top: -148%;
   }
 }
