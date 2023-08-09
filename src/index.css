@@ -21,3 +21,61 @@ body {
   width: 97%;
   margin: 0 auto;
 }
+
+.form_layout {
+  width: 660px;
+}
+
+input[id="cb1"] + label {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #00c0b3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[id="cb1"]:checked + label:after {
+  position: relative;
+  top: -4px;
+  left: 2px;
+  content: "\2714";
+  font-size: 14px;
+}
+input[id="cb1"] {
+  display: none;
+}
+
+.input_checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  width: 100%;
+}
+
+.error {
+  color: red;
+}
+.error::after {
+  content: "*";
+}
+
+@media (min-width: 320px) and (max-width: 668px) {
+  .form_layout {
+    width: 320px;
+  }
+
+  input[id="cb1"] + label {
+    display: inline-block;
+    width: 22px;
+    height: 14px;
+    border: 2px solid #00c0b3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .input_checkbox {
+    width: 62%;
+    margin: 0 auto;
+  }
+}
