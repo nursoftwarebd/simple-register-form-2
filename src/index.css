@@ -57,7 +57,7 @@ input[id="cb1"] {
 
 .select_btn_menu {
   border-radius: 30px;
-  padding: 6px 12px;
+  padding: 8px 12px;
   cursor: pointer;
   color: #4c4c4c;
 }
@@ -87,8 +87,12 @@ input[id="cb1"] {
 }
 .shape2 {
   position: absolute;
-  top: -165%;
+  top: -99%;
   left: -5px;
+}
+
+.store_img {
+  width: 190px;
 }
 
 /* ========================= responsive handler start  ================================*/
@@ -111,6 +115,10 @@ input[id="cb1"] {
     width: 62%;
     margin: 0 auto;
   }
+
+  .store_img {
+    width: 167px;
+  }
 }
 
 /* ========================= background shape responsive handling for all devices */
@@ -132,7 +140,7 @@ input[id="cb1"] {
   .shape2 {
     display: block;
     position: absolute;
-    top: -165%;
+    top: -99%;
   }
 }
 @media (min-width: 1024px) {
@@ -141,9 +149,12 @@ input[id="cb1"] {
     top: 10%;
     right: -5%;
   }
-  .shape2 {
+  /* .shape2 {
     position: absolute;
-    top: -165%;
+    top: -99%;
+  } */
+  .store_img {
+    width: 190px;
   }
 }
 @media (min-width: 1280px) {
@@ -152,8 +163,8 @@ input[id="cb1"] {
     top: 20%;
     right: 0;
   }
-  .shape2 {
+  /* .shape2 {
     position: absolute;
-    top: -165%;
-  }
+    top: -99%;
+  } */
 }

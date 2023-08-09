@@ -118,7 +118,7 @@ function Header() {
                   <Box sx={{ marginTop: "20px" }}>
                     <select className="select_btn_menu" name="language" id="language">
                       <option value="NL">NL</option>
-                      <option value="English">English</option>
+                      <option value="EN">EN</option>
                     </select>
                   </Box>
                 </Box>
@@ -134,7 +134,7 @@ function Header() {
               <Box sx={{ display: "inline-block" }}>
                 <select className="select_btn" name="language" id="language">
                   <option value="NL">NL</option>
-                  <option value="English">English</option>
+                  <option value="EN">EN</option>
                 </select>
               </Box>
               {/* login */}

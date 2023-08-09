@@ -83,12 +83,12 @@ const App = () => {
 
           <Box sx={{ textAlign: "center", marginTop: "20px" }}>
             {/* checkbox */}
-            <div style={{ marginBottom: "60px" }} className="input_checkbox">
+            <Box sx={{ marginBottom: { xs: "40px", md: "60px" } }} className="input_checkbox">
               <input type="checkbox" id="cb1" />
               <label htmlFor="cb1"></label>
 
-              <p>Keep me informed about my lists by email</p>
-            </div>
+              <p style={{textAlign: "left"}}>Keep me informed about my lists by email</p>
+            </Box>
             {/* submit button */}
             <ButtonBase
               type="submit"
