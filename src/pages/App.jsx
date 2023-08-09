@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "100px" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding:"5.5rem"}}>
         {/* =============== heading */}
         <Typography variant="h5" gutterBottom sx={{ color: "#4c4c4c", fontWeight: "800", marginBottom: "32px" }}>
           Registration

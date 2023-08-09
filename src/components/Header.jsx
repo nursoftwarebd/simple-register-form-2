@@ -7,25 +7,13 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
 import logo from "../assets/logo.png";
 import { ButtonBase } from "@mui/material";
-import InputLabel from "@mui/material/InputLabel";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 
 const pages = ["Login"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const [language, setLanguage] = React.useState("");
-
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
-  };
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -35,7 +23,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#fff", boxShadow: "none", borderBottom: "1px solid #eee", padding: "18px 0" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#fff", boxShadow: "none", borderBottom: "1px solid #E8E8E8", padding: "26px 0" }}>
       <Container>
         {/* ======================= desktop logo */}
         <Toolbar disableGutters>
@@ -49,9 +37,11 @@ function Header() {
               display: { xs: "none", md: "flex" },
               color: "inherit",
               textDecoration: "none",
+              width: "160px",
+              height: "48px",
             }}
           >
-            <img src={logo} alt="logo" loading="lazy" />
+            <img style={{ width: "100%", height: "100%" }} src={logo} alt="logo" loading="lazy" />
           </Box>
           {/* =========================== mobile / tab size device logo */}
           <Box
@@ -81,6 +71,7 @@ function Header() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="#000"
+              sx={{ marginRight: "5px" }}
             >
               <MenuIcon />
             </IconButton>
@@ -105,12 +96,12 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <Box key={page} sx={{ padding: "20px" }}>
                   <Typography
                     sx={{
                       color: "#00c0b3",
                       background: "#fff",
-                      padding: "6px 22px",
+                      padding: "10px 24px",
                       border: "2px solid #00c0b3",
                       borderRadius: "30px",
                       fontWeight: "bold",
@@ -124,36 +115,28 @@ function Header() {
                     {page}
                   </Typography>
 
-                  <FormControl sx={{ mx: 1, minWidth: 80 }} size="small">
-                    <InputLabel id="demo-select-small-label">Lang</InputLabel>
-                    <Select labelId="demo-select-small-label" id="demo-select-small" value={language} label="Lang" onChange={handleChange}>
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value="NL">NL</MenuItem>
-                      <MenuItem value="English">English</MenuItem>
-                    </Select>
-                  </FormControl>
-                </MenuItem>
+                  <Box sx={{ marginTop: "20px" }}>
+                    <select className="select_btn_menu" name="language" id="language">
+                      <option value="NL">NL</option>
+                      <option value="English">English</option>
+                    </select>
+                  </Box>
+                </Box>
               ))}
             </Menu>
           </Box>
 
           {/* ================================ desktop login & language buttons here */}
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <Tooltip title="Open settings">
-              {/* language */}
-              <FormControl sx={{ mx: 1, minWidth: 80 }} size="small">
-                <InputLabel id="demo-select-small-label">Lang</InputLabel>
-                <Select labelId="demo-select-small-label" id="demo-select-small" value={language} label="Lang" onChange={handleChange}>
-                  <MenuItem value="">
-                    <em>None</em>
-                  </MenuItem>
-                  <MenuItem value="NL">NL</MenuItem>
-                  <MenuItem value="English">English</MenuItem>
-                </Select>
-              </FormControl>
-
+            {/* language */}
+            <Box>
+              {" "}
+              <Box sx={{ display: "inline-block" }}>
+                <select className="select_btn" name="language" id="language">
+                  <option value="NL">NL</option>
+                  <option value="English">English</option>
+                </select>
+              </Box>
               {/* login */}
               <ButtonBase
                 type="submit"
@@ -161,8 +144,8 @@ function Header() {
                 sx={{
                   color: "#00c0b3",
                   background: "#fff",
-                  marginLeft: "2rem",
-                  padding: "12px 22px",
+                  padding: "10px 24px",
+                  marginLeft: "32px",
                   border: "2px solid #00c0b3",
                   borderRadius: "30px",
                   fontWeight: "bold",
@@ -171,7 +154,7 @@ function Header() {
               >
                 Login
               </ButtonBase>
-            </Tooltip>
+            </Box>
           </Box>
         </Toolbar>
       </Container>

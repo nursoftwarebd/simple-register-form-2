@@ -101,10 +101,10 @@ const Footer = () => {
           {/* play & app store */}
           <Stack spacing={1} direction={"row"}>
             <Link href="#">
-              <img width={175} alt="apple-store" src={appleStore} />
+              <img width={150} alt="apple-store" src={appleStore} />
             </Link>
             <Link href="#">
-              <img width={175} alt="play-store" src={playStore} />
+              <img width={150} alt="play-store" src={playStore} />
             </Link>
           </Stack>
         </Stack>
@@ -118,7 +118,8 @@ const Footer = () => {
             fontWeight: 400,
             display: { xs: "block", md: "inline" },
             textAlign: "center",
-            marginTop: { xs: "20px" },
+            margin: { xs: "20px 0" },
+            width: "100%",
           }}
         >
           © Boon & Bliss b.v. 2022 - Privacy statement - Terms and Conditions - Cookie Declaration
