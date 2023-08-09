@@ -33,7 +33,7 @@ const App = () => {
             variant="outlined"
             fullWidth
             error={errors.listName}
-            placeholder="List's Name"
+            placeholder="List's Name*"
           />
 
           {errors.name?.type === "required" && (
@@ -45,7 +45,7 @@ const App = () => {
           <InputBase
             sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("name", { required: true })}
-            placeholder="Name"
+            placeholder="Name*"
             variant="outlined"
             fullWidth
             error={errors.name}
@@ -60,7 +60,7 @@ const App = () => {
           <InputBase
             sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("surname", { required: true })}
-            placeholder="Surname"
+            placeholder="Surname*"
             variant="outlined"
             fullWidth
             error={errors.surname}
@@ -75,7 +75,7 @@ const App = () => {
           <InputBase
             sx={{ outline: "2px solid #00C0B3", padding: "7px  15px", fontSize: "20px", borderRadius: "30px", width: "100%" }}
             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-            placeholder="Email"
+            placeholder="Email*"
             variant="outlined"
             fullWidth
             error={errors.email}
@@ -87,7 +87,7 @@ const App = () => {
               <input type="checkbox" id="cb1" />
               <label htmlFor="cb1"></label>
 
-              <p style={{textAlign: "left"}}>Keep me informed about my lists by email</p>
+              <p style={{ textAlign: "left" }}>Keep me informed about my lists by email</p>
             </Box>
             {/* submit button */}
             <ButtonBase
