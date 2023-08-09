@@ -61,7 +61,9 @@ const Header = () => {
               </Select>
             </FormControl>
 
-            <Button variant="outlined">Login</Button>
+            <Button variant="outlined" className="customBtn">
+              Login
+            </Button>
           </Stack>
         </Container>
       </AppBar>
